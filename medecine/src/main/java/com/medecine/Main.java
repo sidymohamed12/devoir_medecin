@@ -53,10 +53,11 @@ public class Main {
                     rv.setDate(scanner.nextLine());
                     System.out.println("entrer l'heure du rv");
                     rv.setHeure(scanner.nextLine());
-                    // medecinService.findAll().forEach(System.out::println);
-                    // System.out.println("choisissez le medecin (veuillez saisir son id) : ");
-                    // Medecin medecin = medecinService.getById(scanner.nextInt());
-                    // rv.setMedecin(medecin);
+                    medecinService.findAll().forEach(System.out::println);
+                    System.out.println("choisissez le medecin (veuillez saisir son id) : ");
+                    Medecin medecin = medecinService.getById(scanner.nextInt());
+                    System.out.println(medecin);
+                    rv.setMedecin(medecin);
                     rvService.create(rv);
                 }
                 case 4 -> {
