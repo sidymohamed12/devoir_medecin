@@ -56,9 +56,9 @@ public class MedecinRepository extends DataSourceImpl implements Repository<Mede
         Medecin medecin = null;
         try {
             String sql = "SELECT * FROM medecin WHERE id = ?";
-            this.ps.setInt(1, id);
-            initPreparedStatement(sql);
             connexion();
+            initPreparedStatement(sql);
+            this.ps.setInt(1, id);
             ResultSet res = ps.executeQuery();
             while (res.next()) {
                 medecin = new Medecin();
