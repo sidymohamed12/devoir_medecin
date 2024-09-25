@@ -27,8 +27,8 @@ public class Main {
             System.out.println("2- Lister les medecin");
             System.out.println("3- eneregistrer un RV");
             System.out.println("4- Lister les RV");
-            System.out.println("5- Filtrer les RV par date");
-            System.out.println("6- Lister les RV par medecin");
+            System.out.println("5- Filtrer les RV par medecin");
+            System.out.println("6- Lister les RV par date");
             choice = scanner.nextInt();
 
             scanner.nextLine();
