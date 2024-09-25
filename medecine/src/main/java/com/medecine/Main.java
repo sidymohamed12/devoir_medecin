@@ -64,6 +64,13 @@ public class Main {
                     rvService.findAll().forEach(System.out::println);
                 }
                 case 5 -> {
+                    medecinService.findAll().forEach(System.out::println);
+                    System.out.println("choisissez le medecin (veuillez saisir son id) : ");
+                    int id = scanner.nextInt();
+                    rvService.findAll()
+                            .stream()
+                            .filter(rv -> rv.getMedecin().getId() == id)
+                            .forEach(System.out::println);
                 }
             }
         } while (choice != 16);
